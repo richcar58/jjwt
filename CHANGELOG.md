@@ -1,5 +1,13 @@
 ## Release Notes
 
+### 0.9.1 
+
+This is the first release customized for Aloe.  The main change is to recognize JCA signature algorithm names in
+SignatureAlgorithm.java so that the existing Agave auth servers work without modification.  For example, a JWT
+that specifies its algorithm as "SHA256withRSA" will be treated as having specified "RS256" as defined in the JWT
+standard.  This version of jjwt has been relabeled jjwt-aloe.  It includes the first two commits beyond the 0.9.0
+release of jjwt (e9ea740 and 44faaca, 10/30/2017) plus the above modification.
+
 ### 0.9.0
 
 This is a minor release that includes changes to dependencies and plugins to allow for building jjwt with Java 9.

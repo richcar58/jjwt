@@ -265,6 +265,11 @@ public enum SignatureAlgorithm {
             if (alg.getValue().equalsIgnoreCase(value)) {
                 return alg;
             }
+            
+            // Maybe a non-standard jwt algorithm name was specified.
+            String jcaName = alg.getJcaName();
+            if ((jcaName != null) && jcaName.equalsIgnoreCase(value))
+                return alg;
         }
 
         throw new SignatureException("Unsupported signature algorithm '" + value + "'");
