@@ -44,6 +44,15 @@
         <url>git@github.com:richcar58/jjwt-aloe.git</url>
         <tag>HEAD</tag>
     </scm>
+
+	<distributionManagement>
+		<repository>
+			<id>tacc-thirdparty</id>
+			<name>TACC Third Party Release Repository</name>
+			<url>https://maven.tacc.utexas.edu/nexus/content/repositories/thirdparty</url>
+		</repository>
+	</distributionManagement>
+    
     <issueManagement>
         <system>GitHub Issues</system>
         <url>https://github.com/jwtk/jjwt/issues</url>
